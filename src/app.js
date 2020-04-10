@@ -7,7 +7,7 @@ const geocode = require('./utils/geocode')
 
 console.log(__dirname)
 console.log(__filename)
-
+const port = process.env.PORT || 3000
 //Define path for express config
 const publicDirectorypath = path.join(__dirname,'../public') 
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -104,6 +104,6 @@ app.get('/*',(req,res)=>{
     )
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("server started on port 3000")
 })
